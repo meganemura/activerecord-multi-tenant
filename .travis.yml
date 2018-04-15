@@ -32,6 +32,8 @@ services:
   - docker
 
 before_install:
+  - travis_retry gem update --system
+  - travis_retry gem install bundler
   - docker-compose up -d
 
 script:
